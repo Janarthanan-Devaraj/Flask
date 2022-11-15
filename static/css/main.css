@@ -742,7 +742,7 @@
   /*--------------------------------------------------------------
   # Book A Table Section
   --------------------------------------------------------------*/
-  .book-a-table{
+  .book-a-table .reservation-img {
     min-height: 500px;
     background-size: cover;
     background-position: center;
@@ -824,8 +824,7 @@
   }
   
   .book-a-table .php-email-form input,
-  .book-a-table .php-email-form textarea,
-  .book-a-table .php-email-form select {
+  .book-a-table .php-email-form textarea {
     border-radius: 0;
     box-shadow: none;
     font-size: 14px;
@@ -844,9 +843,6 @@
   .book-a-table .php-email-form textarea {
     padding: 12px 15px;
   }
-  .book-a-table .php-email-form select{
-      padding: 12px 15px;
-  }
   
   .book-a-table .php-email-form button[type=submit] {
     background: var(--color-primary);
@@ -859,6 +855,10 @@
   
   .book-a-table .php-email-form button[type=submit]:hover {
     background: #ec2727;
+  }
+
+  .submit{
+    margin-top: 40px;
   }
   
   @-webkit-keyframes animate-loading {
@@ -880,8 +880,41 @@
       transform: rotate(360deg);
     }
   }
-  
-  
+ /*--------------------------------------------------------------
+# Stats Counter Section
+--------------------------------------------------------------*/
+.stats-counter {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/stats-bg.jpg") center center;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+@media (min-width: 1365px) {
+  .stats-counter {
+    background-attachment: fixed;
+  }
+}
+
+.stats-counter .stats-item {
+  padding: 30px;
+  width: 100%;
+}
+
+.stats-counter .stats-item span {
+  font-size: 48px;
+  display: block;
+  color: #fff;
+  font-weight: 700;
+}
+
+.stats-counter .stats-item p {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+}  
   
   /*--------------------------------------------------------------
   # Contact Section

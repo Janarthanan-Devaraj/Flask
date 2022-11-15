@@ -49,7 +49,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <!--<li><a href="#about">About</a></li>-->
           <li><a href="#book-a-table">Predict</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -80,7 +80,7 @@
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
+    <!-- ======= About Section ======= 
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
@@ -121,77 +121,83 @@
         </div>
 
       </div>
-    </section><!-- End About Section -->
-
+    </section>--><!-- End About Section -->
 
     <!-- ======= Book A Table Section ======= -->
     <section id="book-a-table" class="book-a-table">
-      <div class="container d-flex" data-aos="fade-up">
+      <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-            <h2>Predict</h2>
+          <h2>Predict</h2>
             <p>Predict <span>Demand For</span> Next 10 Weeks</p>
         </div>
 
         <div class="row g-0">
-          <div class="col-lg  offset-md-2 d-flex align-items-center reservation-form-bg">
-            <form action="#" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
-                <div class="row gy-4 form-input">
-                    <div class="col-lg-8 col-md-8 offset-md-2">
-                        <select class="form-control">
-                            <option>Homepage featured</option>
-                            <option>emailer for promation</option>
-                            <option>Category</option>
-                            <option>Cuisine</option>
+
+          <div class="col-lg-4 reservation-img" style="background-image: url(static/img/about-2.jpg);" data-aos="zoom-out" data-aos-delay="200"></div>
+
+          <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
+            <form action="/predict" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+              <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                  <label for="HomepageFeatured">Homepage Featured</label>
+                        <select class="form-control" name="homepageFeatured" id="homepageFeatured" required = "required">
+                            <option>Yes</option>
+                            <option>No</option>
                         </select>
-                        <div class="validate"></div>
-
-                    </div>
-                    <div class="col-lg-8 col-md-8 offset-md-2">
-                        <select class="form-control">
-                            <option>Homepage featured</option>
-                            <option>emailer for promation</option>
-                            <option>Category</option>
-                            <option>Cuisine</option>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <label for="emailerForPromation">Emailer For Promation</label>
+                        <select class="form-control" name="emailerForPromation" id="emailerForPromation" required = "required">
+                            <option>Yes</option>
+                            <option>No</option>
                         </select>
-                        <div class="validate"></div>
-
-                    </div>
-                  <div class="col-lg-8 col-md-8 offset-md-2">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                    <div class="validate"></div>
-                  </div>
-                  <div class="col-lg-8 col-md-8 offset-md-2">
-                    <select class="form-control">
-                        <option>Homepage featured</option>
-                        <option>emailer for promation</option>
-                        <option>Category</option>
-                        <option>Cuisine</option>
-                    </select>
-                    <div class="validate"></div>
-
                 </div>
-                  <div class="col-lg-8 col-md-8 offset-md-2">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
-                    <div class="validate"></div>
-                  </div>
-                  
-                  <div class="col-lg-8 col-md-8 offset-md-2">
-                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                    <div class="validate"></div>
-                  </div>
-                  <div class="col-lg-8 col-md-8 offset-md-2">
-                    <select class="form-control">
-                        <option>Homepage featured</option>
-                        <option>emailer for promation</option>
-                        <option>Category</option>
-                        <option>Cuisine</option>
-                    </select>
-                    <div class="validate"></div>
-
+                <div class="col-lg-4 col-md-6">
+                  <label for="op_area">Operation area</label>
+                    <input type="number" name="op_area" class="form-control" id="op_area" placeholder="Enter the op_area" data-rule="number" data-msg="Please enter values form 2 - 7" required = "required">
                 </div>
-                <div class="text-center"><button type="submit">Predict</button></div>
-              </form>
+                <div class="col-lg-4 col-md-6">
+                  <label for="cuisine">Cuisine</label>
+                        <select class="form-control" name ="cuisine" id="cuisine" required = "required">
+                            <option>Thai</option>
+                            <option>Indian</option>
+                            <option>Italian</option>
+                            <option>Continental</option>
+                        </select>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <label for="cityCode">City Code</label>
+                    <input type="number" class="form-control" name="cityCode" id="cityCode" placeholder="Enter city code" data-rule="number" data-msg="Please enter a valid city code" required = "required">
+                    
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <label for="regionCode">Region Code</label>
+                    <input type="number" class="form-control" name="regionCode" id="regionCode" placeholder="Enter region code" data-rule="number" data-msg="Please enter a valid region code" required = "required">
+                    
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <label for="category">Category</label>
+                        <select class="form-control" name="category" id="category" required = "required">
+                            <option>Beverages</option>
+                            <option>Extras</option>
+                            <option>Soup</option>
+                            <option>Other Snacks</option>
+                            <option>Salad</option>
+                            <option>Rice Bowl</option>
+                            <option>Starters</option>
+                            <option>Sandwich</option>
+                            <option>Pasta</option>
+                            <option>Desert</option>
+                            <option>Biryani</option>
+                            <option>Pizza</option>
+                            <option>Fish</option>
+                            <option>Seafood</option>
+                        </select>
+              </div>
+              <div class="text-center submit"><button type="submit">Predict</button></div>
+            </form>
           </div><!-- End Reservation Form -->
 
         </div>
@@ -199,6 +205,21 @@
       </div>
     </section><!-- End Book A Table Section -->
 
+     <!-- ======= Stats Counter Section ======= -->
+     <section id="stats-counter" class="stats-counter">
+      <div class="container" data-aos="zoom-out">
+
+        <div class="row gy-4 offset-lg">
+          <div class="col-lg col-md ">
+            <div class="stats-item text-center w-100 h-100">
+              <span>{{y}}</span>
+              <p>Number of Orders:</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+      </div>
+    </section><!-- End Stats Counter Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -210,7 +231,7 @@
         </div>
 
         <div class="mb-3">
-          <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+          <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.192012135983!2d77.00063011472076!3d11.024215892153656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8582f1435fa59%3A0x137d95bfd8909293!2sPSG%20College%20Of%20Technology!5e0!3m2!1sen!2sin!4v1668519163596!5m2!1sen!2sin" frameborder="0" allowfullscreen></iframe>
         </div><!-- End Google Maps -->
 
         <div class="row gy-4">
@@ -243,20 +264,20 @@
   <footer id="footer" class="footer">
 
     <div class="container">
-      <div class="row gy-3">
-        <div class="col-lg-3 col-md-6 d-flex">
+      <div class="row gy-3 offset-lg-1">
+        <div class="col-lg col-md d-flex">
           <i class="bi bi-geo-alt icon"></i>
           <div>
             <h4>Address</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022 - US<br>
+              Avinashi Rd, Peelamedu, <br>
+              Coimbatore, Tamil Nadu 641004 - India<br>
             </p>
           </div>
 
         </div>
 
-        <div class="col-lg-3 col-md-6 footer-links d-flex">
+        <div class="col-lg col-md footer-links d-flex">
           <i class="bi bi-telephone icon"></i>
           <div>
             <h4>Reservations</h4>
@@ -267,18 +288,7 @@
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6 footer-links d-flex">
-          <i class="bi bi-clock icon"></i>
-          <div>
-            <h4>Opening Hours</h4>
-            <p>
-              <strong>Mon-Sat: 11AM</strong> - 23PM<br>
-              Sunday: Closed
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 footer-links">
+        <div class="col-lg col-md footer-links">
           <h4>Follow Us</h4>
           <div class="social-links d-flex">
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -300,13 +310,36 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/ -->
-        Designed by <a href="#">Jana</a>
+        Designed by <a href="#">PSG</a>
       </div>
     </div>
 
   </footer><!-- End Footer -->
   <!-- End Footer -->
-
+  <script>
+    $(document).ready(function() {
+      $('.btn-success').click(function(){
+        $.ajax({
+          url : "/predict",
+          type: 'POST',
+          contentType: 'application/json',
+          success: function(response){
+            $(output).replaceWith(data)
+          }
+        })
+      })
+    })
+    function predict(){
+      $.ajax({
+        url:"/predict",
+        type:"GET",
+        dataType: "json",
+        success: function(data1, data2, data){
+          $(output).replaceWith(data)
+        }
+      })};
+    
+  </script>
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
@@ -317,7 +350,6 @@
   <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="static/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="static/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="static/js/main.js"></script>

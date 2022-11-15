@@ -1,6 +1,12 @@
 {
 	"folders": [
 		{
+			"path": "../Yummy"
+		},
+		{
+			"path": "../Flask-file"
+		},
+		{
 			"path": "."
 		}
 	],
